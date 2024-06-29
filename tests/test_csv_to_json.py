@@ -4,7 +4,7 @@ import pandas
 from pandas import DataFrame
 import json
 
-csv_path = Path(__file__).parent.parent / 'csv'
+csv_path = Path(__file__).parent.parent / 'data'
 
 
 class TestCSVImport(TestCase):
