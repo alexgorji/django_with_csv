@@ -7,4 +7,3 @@ class TestViews(TestCase):
         response = self.client.get(reverse('importcsv:upload'))
         assert response.status_code == 200
         self.assertTemplateUsed(response, 'importcsv/upload.html')
-

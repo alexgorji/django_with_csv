@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('importcsv/', include('importcsv.urls'))
+    path('csv/', include('importcsv.urls'))
 ]

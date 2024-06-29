@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Upload CSV</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Upload CSV{% endblock %}
+{% block main %}
+    <form method="post" novalidate enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="csv_upload">Choose file to upload</label>
+        <input type="file" id="csv_upload" name="file" multiple/>
+        <button type="submit" id="csv_submit">Upload</button>
+    </form>
+{% endblock %}
 
-</body>
-</html>
