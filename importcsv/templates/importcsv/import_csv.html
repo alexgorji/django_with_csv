@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Import CSV{% endblock %}
+{% block main %}
+    <form method="post" novalidate enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="csv-upload">Choose file to upload</label>
+        <input type="file" id="csv-upload" name="file" multiple/>
+        <button type="submit" id="csv-submit">Upload</button>
+    </form>
+    <div id="csv-success-message">{{ success_message }}</div>
+    <div id="data-table"></div>
+{% endblock %}
+

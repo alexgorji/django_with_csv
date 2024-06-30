@@ -15,7 +15,7 @@ def navigate_to_upload_page(page, live_server):
     upload_page = UploadCSVPage(page)
     url = f"{live_server.live_server_url}{reverse('importcsv:upload')}"
     upload_page.navigate(url)
-    assert page.title() == 'Upload CSV'
+    assert page.title() == 'Import CSV'
 
 
 @when('the user selects a file to upload')
@@ -37,4 +37,6 @@ def submit_form(page):
 def verify_file_upload(page):
     print('verify_file_upload')
     upload_page = UploadCSVPage(page)
-    assert upload_page.get_success_message() == 'Upload successful'
+    # assert page.title() == 'Upload Successful'
+    # assert upload_page.success_message == f"File {{ csv_path.name }} was successfully uploaded."
+    assert upload_page.get_success_message() == "Upload was successful"

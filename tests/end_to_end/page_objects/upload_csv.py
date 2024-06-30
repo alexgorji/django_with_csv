@@ -14,9 +14,9 @@ class BasePage:
 class UploadCSVPage(BasePage):
     def __init__(self, page: Page) -> None:
         super().__init__(page)
-        self.upload_input = page.locator('#csv_upload')
-        self.submit_button = page.locator('#csv_submit')
-        self.success_message = page.locator('#csv_success')
+        self.upload_input = page.locator('#csv-upload')
+        self.submit_button = page.locator('#csv-submit')
+        self.success_message = page.locator('#csv-success-message')
 
     def upload_file(self, csv_path: Path):
         self.upload_input.set_input_files(str(csv_path))
